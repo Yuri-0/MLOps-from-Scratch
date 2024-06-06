@@ -87,7 +87,7 @@ For a tutorial using the MNIST dataset and a PyTorch-based image classification 
 - Modularized core logic such as process of DB querying, save and load files is handled in model_manager.py
 - FastAPI get requests from endpoints for each role, and process required jobs using module in the model_manager.py step by step
 
-![system_architecture](https://file.notion.so/f/f/6bbcca24-2c1a-4703-9959-15b5e2fb1024/1a2a32e2-925c-4fdc-a1ec-a31c95a3fa90/Untitled.png?id=806b8ac8-f789-4d24-beab-92ed29a97492&table=block&spaceId=6bbcca24-2c1a-4703-9959-15b5e2fb1024&expirationTimestamp=1716969600000&signature=Td3tuGTenVc5qWb6_c2WQzmcdheOu0clhh0eEEHmODg&downloadName=Untitled.png)
+![system_architecture](src/system_architecture.png)
 </br>
 
 ## Design of Model Registry
@@ -98,7 +98,7 @@ For a tutorial using the MNIST dataset and a PyTorch-based image classification 
 - `experiment_id` column is used to unique id value crossing the total tables
 - `artifact_uri` and `dataset_uri` columns have path of each file stored
 
-![db_schema](https://file.notion.so/f/f/6bbcca24-2c1a-4703-9959-15b5e2fb1024/4af4220b-2461-4869-ac0e-307d9389e0a3/Untitled.png?id=6f5650a2-fdd7-446a-b44a-361cbfd4e88f&table=block&spaceId=6bbcca24-2c1a-4703-9959-15b5e2fb1024&expirationTimestamp=1716969600000&signature=jSG5OHXd1aoMoPgjMm9oBJP0cE4VuLauQ1gXkR3Hekg&downloadName=Untitled.png)
+![db_schema](src/db_schema.png)
 
 #### File System Architecture
 - Default directory configuration of the model registry is `model_registry/repository`
@@ -265,7 +265,7 @@ model_registry
 - The SDK supports usage in pytorch lightning and limited pytorch for now
 - TotalLogger callback for pytorch lightning it built-in in the SDK provide logging of parameters, metrics, tags, and models automatically using ModelManager
 
-![sdk_uml_diagram](https://file.notion.so/f/f/6bbcca24-2c1a-4703-9959-15b5e2fb1024/4af4220b-2461-4869-ac0e-307d9389e0a3/Untitled.png?id=6f5650a2-fdd7-446a-b44a-361cbfd4e88f&table=block&spaceId=6bbcca24-2c1a-4703-9959-15b5e2fb1024&expirationTimestamp=1716969600000&signature=jSG5OHXd1aoMoPgjMm9oBJP0cE4VuLauQ1gXkR3Hekg&downloadName=Untitled.png)
+![sdk_uml_diagram](src/sdk_uml_diagram.png)
 
 #### Tutorial
 
